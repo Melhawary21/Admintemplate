@@ -1,0 +1,16 @@
+.btn-primary {
+  background-color: var(--ab-primary);
+  border-color: var(--ab-primary);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background-color: color-mix(in srgb, var(--ab-primary), #000 8%);
+  border-color: color-mix(in srgb, var(--ab-primary), #000 8%);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: rgba(var(--ab-primary-rgb), 0.55);
+  box-shadow: 0 0 0 0.22rem rgba(var(--ab-primary-rgb), 0.18);
+}

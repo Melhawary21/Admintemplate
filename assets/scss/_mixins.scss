@@ -1,0 +1,11 @@
+@mixin focus-ring {
+  outline: 2px solid rgba(var(--ab-primary-rgb), 0.45);
+  outline-offset: 2px;
+}
+
+@mixin card-surface {
+  background: var(--ab-surface);
+  border: 1px solid var(--ab-border);
+  border-radius: var(--ab-radius-md);
+  box-shadow: var(--ab-shadow-sm);
+}

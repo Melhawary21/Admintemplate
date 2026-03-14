@@ -1,0 +1,34 @@
+.ab-layout {
+  display: grid;
+  grid-template-columns: var(--ab-sidebar-width) 1fr;
+  min-height: 100vh;
+  background: var(--ab-bg);
+}
+
+.ab-main {
+  min-width: 0;
+}
+
+.ab-content {
+  padding: var(--ab-space-6);
+}
+
+.ab-page-header {
+  margin-bottom: var(--ab-space-6);
+}
+
+[data-layout-width='boxed'] .ab-content {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+[data-density='compact'] {
+  --ab-space-6: 18px;
+  --ab-space-5: 16px;
+}
+
+@media (max-width: 991.98px) {
+  .ab-layout {
+    grid-template-columns: 1fr;
+  }
+}

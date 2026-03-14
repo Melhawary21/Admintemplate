@@ -1,0 +1,63 @@
+@import 'variables';
+@import 'mixins';
+@import 'bootstrap-overrides';
+@import 'layouts';
+@import 'sidebar';
+@import 'header';
+@import 'cards';
+@import 'forms';
+@import 'tables';
+@import 'charts';
+@import 'utilities';
+@import 'dark-mode';
+@import 'rtl';
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--ab-font-family);
+  background: var(--ab-bg);
+  color: var(--ab-text);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  @include focus-ring;
+}
+
+.ab-customizer {
+  position: fixed;
+  right: 0;
+  top: 35%;
+  z-index: 1080;
+}
+
+.ab-customizer-trigger {
+  border: 0;
+  color: #fff;
+  background: var(--ab-primary);
+  border-radius: 10px 0 0 10px;
+  width: 40px;
+  height: 42px;
+}
+
+.ab-customizer-panel {
+  width: 300px;
+  background: var(--ab-surface);
+  border: 1px solid var(--ab-border);
+  border-right: 0;
+  padding: var(--ab-space-4);
+  transform: translateX(100%);
+  transition: transform 0.2s ease;
+  box-shadow: var(--ab-shadow-md);
+}
+
+.ab-customizer.is-open .ab-customizer-panel { transform: translateX(0); }
+
+.ab-auth-page {
+  background: radial-gradient(circle at 5% 10%, #e2e8f0, #f8fafc 55%);
+}

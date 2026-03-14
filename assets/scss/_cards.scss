@@ -1,0 +1,61 @@
+.ab-card {
+  @include card-surface;
+}
+
+.ab-card-header {
+  padding: var(--ab-space-4) var(--ab-space-5);
+  border-bottom: 1px solid var(--ab-border);
+}
+
+.ab-card-body {
+  padding: var(--ab-space-5);
+}
+
+.ab-grid-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--ab-space-4);
+}
+
+.ab-stat h3 {
+  margin-bottom: 8px;
+}
+
+.ab-stat-label {
+  margin-bottom: 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ab-text-muted);
+}
+
+.ab-delta {
+  margin-bottom: 0;
+  font-size: 13px;
+  color: var(--ab-text-muted);
+}
+
+.ab-delta.is-positive { color: var(--ab-success); }
+.ab-delta.is-warning { color: var(--ab-warning); }
+
+.ab-timeline {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.ab-timeline li {
+  margin-bottom: var(--ab-space-4);
+}
+
+.ab-timeline span {
+  display: block;
+  color: var(--ab-text-muted);
+  font-size: 13px;
+}
+
+@media (max-width: 1200px) {
+  .ab-grid-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 575.98px) {
+  .ab-grid-stats { grid-template-columns: 1fr; }
+}

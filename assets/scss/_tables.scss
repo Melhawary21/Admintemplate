@@ -1,0 +1,10 @@
+.table > :not(caption) > * > * {
+  padding: 0.82rem 0.9rem;
+}
+
+.table thead th {
+  font-size: 12px;
+  color: var(--ab-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
