@@ -1,0 +1,5 @@
+.ab-card{background:var(--ab-surface);border:1px solid var(--ab-border);border-radius:var(--ab-radius);box-shadow:var(--ab-shadow)}
+.ab-card-header{padding:16px 20px;border-bottom:1px solid var(--ab-border)}.ab-card-body{padding:20px}
+.ab-stat{display:flex;justify-content:space-between;align-items:center;padding:20px}.ab-stat-label{margin:0;color:var(--ab-muted);font-size:13px}
+.ab-stat-icon{width:42px;height:42px;border-radius:10px;background:var(--ab-surface-2);display:grid;place-items:center;color:var(--ab-primary);font-weight:700}
+.ab-timeline{margin:0;padding-left:18px}.ab-timeline li{margin-bottom:14px}.ab-timeline small{display:block;color:var(--ab-muted)}

@@ -1,0 +1,21 @@
+@import 'variables';
+@import 'bootstrap-overrides';
+@import 'mixins';
+@import 'utilities';
+@import 'layouts';
+@import 'sidebar';
+@import 'header';
+@import 'cards';
+@import 'forms';
+@import 'tables';
+@import 'charts';
+@import 'dark-mode';
+@import 'rtl';
+
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--ab-bg);color:var(--ab-text)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid rgba(79,70,229,.45);outline-offset:2px}
+.ab-page-head{margin-bottom:24px}
+.ab-customizer{position:fixed;inset-inline-end:0;top:35%;z-index:1080}.ab-customizer-toggle{border:0;background:var(--ab-primary);color:#fff;padding:10px 12px;border-radius:10px 0 0 10px}
+.ab-customizer-panel{width:290px;background:var(--ab-surface);border:1px solid var(--ab-border);padding:16px;transform:translateX(100%);transition:.2s ease;box-shadow:var(--ab-shadow)}
+.ab-customizer.open .ab-customizer-panel{transform:translateX(0)}
+.ab-auth-body{background:radial-gradient(circle at top left,#e2e8f0,#f8fafc)}

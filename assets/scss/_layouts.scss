@@ -1,0 +1,5 @@
+.ab-app{display:flex;min-height:100vh;background:var(--ab-bg)}
+.ab-main-wrap{flex:1;min-width:0}
+.ab-content{padding:var(--ab-space-6)}
+[data-ab-width='boxed'] .ab-main-wrap{max-width:1440px;margin-inline:auto}
+[data-density='compact']{--ab-space-6:16px;--ab-space-5:16px}
