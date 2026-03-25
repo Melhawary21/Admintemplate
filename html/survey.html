@@ -3,9 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>App Email | AegisBoard</title>
+  <title>Survey | AegisBoard</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="../assets/css/app.css" rel="stylesheet">
+  <style>
+    .survey-card { background: #fff; border: 1px solid #c8c8c8; border-radius: 0; box-shadow: none; }
+    .survey-header { background: #6d6d6d; color: #fff; padding: 6px 12px; font-weight: 600; font-size: 14px; border-bottom: 3px solid #c8960c; }
+    .survey-body { padding: 12px 16px; background: #f0f0f0; }
+    .survey-label { font-size: 12px; font-weight: 600; color: #333; white-space: nowrap; }
+    .survey-input { border: 1px solid #aaa; border-radius: 0; background: #fff; font-size: 12px; height: 22px; padding: 2px 6px; }
+    .survey-input:focus { outline: none; border-color: #4f46e5; box-shadow: none; }
+    .survey-tab-nav .nav-link { border-radius: 0; background: #d4d4d4; color: #333; font-size: 12px; padding: 4px 14px; border: 1px solid #b0b0b0; margin-right: 2px; }
+    .survey-tab-nav .nav-link.active { background: #fff; color: #333; border-bottom-color: #fff; font-weight: 600; }
+    .survey-table-wrap { border: 1px solid #aaa; background: #fff; min-height: 200px; }
+    .survey-table { font-size: 12px; margin: 0; }
+    .survey-table thead th { background: #d9d9d9; border: 1px solid #bbb; padding: 4px 8px; font-weight: 600; color: #333; font-size: 12px; }
+    .survey-table tbody td { border: 1px solid #ddd; padding: 3px 8px; font-size: 12px; }
+    .survey-table tbody tr:hover { background: #f5f5ff; }
+    .survey-notes-label { font-size: 12px; font-weight: 600; color: #333; }
+    .survey-btn { background: #c8960c; border: 1px solid #a07000; color: #fff; border-radius: 0; font-size: 12px; padding: 4px 18px; }
+    .survey-btn:hover { background: #a07000; color: #fff; }
+  </style>
 </head>
 <body>
 <div class="ab-app" id="abApp">
@@ -32,7 +50,7 @@
 <li class="ab-nav-group"><button class="ab-nav-group-toggle" data-bs-toggle="collapse" data-bs-target="#nav-apps" aria-expanded="true">Apps</button>
 <ul id="nav-apps" class="collapse show">
 <li><a class="ab-nav-link " href="app-chat.html">App Chat</a></li>
-<li><a class="ab-nav-link active" href="app-email.html">App Email</a></li>
+<li><a class="ab-nav-link " href="app-email.html">App Email</a></li>
 <li><a class="ab-nav-link " href="app-kanban.html">App Kanban</a></li>
 <li><a class="ab-nav-link " href="app-calendar.html">App Calendar</a></li>
 <li><a class="ab-nav-link " href="app-tasks.html">App Tasks</a></li>
@@ -40,7 +58,7 @@
 <li><a class="ab-nav-link " href="app-invoice-details.html">App Invoice Details</a></li>
 <li><a class="ab-nav-link " href="app-file-manager.html">App File Manager</a></li>
 <li><a class="ab-nav-link " href="app-contact-list.html">App Contact List</a></li>
-<li><a class="ab-nav-link " href="survey.html">Survey</a></li>
+<li><a class="ab-nav-link active" href="survey.html">Survey</a></li>
 </ul></li>
 <li class="ab-nav-group"><button class="ab-nav-group-toggle" data-bs-toggle="collapse" data-bs-target="#nav-components" aria-expanded="false">Components</button>
 <ul id="nav-components" class="collapse">
@@ -115,24 +133,126 @@
     </header>
 
     <main class="ab-content container-fluid" tabindex="-1">
-      <div class="ab-page-head"><h1>App Email</h1><p class="text-muted">Enterprise-ready Bootstrap 5 module with reusable, accessible UI building blocks.</p></div>
-      
-<section class="ab-card"><header class="ab-card-header"><h5>Operations Table</h5></header><div class="ab-card-body table-responsive"><table class="table align-middle" id="demoTable"><thead><tr><th>Project</th><th>Owner</th><th>Status</th><th>Budget</th></tr></thead><tbody>
-<tr><td>Northwind Migration</td><td>Ahmed Khan</td><td><span class="badge text-bg-success">On Track</span></td><td>$42,000</td></tr>
-<tr><td>CRM Pipeline V2</td><td>Lina Cho</td><td><span class="badge text-bg-warning">At Risk</span></td><td>$31,400</td></tr>
-<tr><td>Quarterly Audit</td><td>Mia Foster</td><td><span class="badge text-bg-info">Planned</span></td><td>$9,800</td></tr>
-</tbody></table></div></section>
+      <div class="ab-page-head"><h1>Survey</h1><p class="text-muted">Manage and fill out survey forms.</p></div>
 
-<div class="row g-4 mb-4">
-  <div class="col-xl-3 col-sm-6"><article class="ab-card ab-stat"><div><p class="ab-stat-label">Revenue</p><h3>$184,230</h3><span class="text-success">+18.6%</span></div><span class="ab-stat-icon">$</span></article></div>
-  <div class="col-xl-3 col-sm-6"><article class="ab-card ab-stat"><div><p class="ab-stat-label">Active Users</p><h3>24,920</h3><span class="text-success">+8.2%</span></div><span class="ab-stat-icon">U</span></article></div>
-  <div class="col-xl-3 col-sm-6"><article class="ab-card ab-stat"><div><p class="ab-stat-label">Tickets</p><h3>312</h3><span class="text-warning">14 pending</span></div><span class="ab-stat-icon">T</span></article></div>
-  <div class="col-xl-3 col-sm-6"><article class="ab-card ab-stat"><div><p class="ab-stat-label">MRR</p><h3>$67,800</h3><span class="text-success">+4.1%</span></div><span class="ab-stat-icon">M</span></article></div>
-</div>
-<div class="row g-4">
-  <div class="col-xl-8"><section class="ab-card"><header class="ab-card-header"><h5>Performance Overview</h5></header><div class="ab-card-body"><div id="apexArea" style="height:300px"></div></div></section></div>
-  <div class="col-xl-4"><section class="ab-card"><header class="ab-card-header"><h5>Recent Activity</h5></header><div class="ab-card-body"><ul class="ab-timeline"><li><strong>Invoice #INV-1192 paid</strong><small>2m ago</small></li><li><strong>New lead assigned to Mia</strong><small>11m ago</small></li><li><strong>Server patch completed</strong><small>35m ago</small></li><li><strong>Quarterly review published</strong><small>1h ago</small></li></ul></div></section></div>
-</div>
+      <!-- Survey Form Card -->
+      <div class="survey-card">
+        <div class="survey-header">Survey</div>
+        <div class="survey-body">
+
+          <!-- Top Fields Row -->
+          <div class="row g-2 mb-2 align-items-center">
+            <!-- Left Column -->
+            <div class="col-lg-6">
+              <!-- Survey Done By -->
+              <div class="row g-1 mb-2 align-items-center">
+                <div class="col-4 text-end"><label class="survey-label">Survey Done By</label></div>
+                <div class="col-4"><input type="text" class="form-control survey-input w-100" id="surveyDoneByFirst"></div>
+                <div class="col-4"><input type="text" class="form-control survey-input w-100" id="surveyDoneByLast"></div>
+              </div>
+              <!-- Result -->
+              <div class="row g-1 mb-2 align-items-center">
+                <div class="col-4 text-end"><label class="survey-label">Result</label></div>
+                <div class="col-5"><input type="text" class="form-control survey-input w-100" id="result"></div>
+              </div>
+              <!-- Total Score -->
+              <div class="row g-1 mb-2 align-items-center">
+                <div class="col-4 text-end"><label class="survey-label">Total Score</label></div>
+                <div class="col-5"><input type="text" class="form-control survey-input w-100" id="totalScore"></div>
+              </div>
+              <!-- AVG Score -->
+              <div class="row g-1 mb-2 align-items-center">
+                <div class="col-4 text-end"><label class="survey-label">AVG Score</label></div>
+                <div class="col-5"><input type="text" class="form-control survey-input w-100" id="avgScore"></div>
+              </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-lg-6">
+              <!-- Survey No -->
+              <div class="row g-1 mb-2 align-items-center">
+                <div class="col-4 text-end"><label class="survey-label">Survey No</label></div>
+                <div class="col-5"><input type="text" class="form-control survey-input w-100" id="surveyNo"></div>
+              </div>
+              <!-- Survey Date -->
+              <div class="row g-1 mb-2 align-items-center">
+                <div class="col-4 text-end"><label class="survey-label">Survey Date</label></div>
+                <div class="col-4"><input type="text" class="form-control survey-input w-100" id="surveyDateFrom" placeholder="From"></div>
+                <div class="col-3"><input type="text" class="form-control survey-input w-100" id="surveyDateTo" placeholder="To"></div>
+              </div>
+              <!-- Docment Type -->
+              <div class="row g-1 mb-2 align-items-center">
+                <div class="col-4 text-end"><label class="survey-label">Docment Type</label></div>
+                <div class="col-5"><input type="text" class="form-control survey-input w-100" id="docmentType"></div>
+              </div>
+              <!-- Docment No. -->
+              <div class="row g-1 mb-2 align-items-center">
+                <div class="col-4 text-end"><label class="survey-label">Docment No.</label></div>
+                <div class="col-5"><input type="text" class="form-control survey-input w-100" id="docmentNo"></div>
+              </div>
+              <!-- Survet Type -->
+              <div class="row g-1 mb-2 align-items-center">
+                <div class="col-4 text-end"><label class="survey-label">Survet Type</label></div>
+                <div class="col-5"><input type="text" class="form-control survey-input w-100" id="survetType"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tabs Section -->
+          <div class="mt-2">
+            <ul class="nav survey-tab-nav" id="surveyTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="folder1-tab" data-bs-toggle="tab" data-bs-target="#folder1" type="button" role="tab">Folder1</button>
+              </li>
+            </ul>
+            <div class="tab-content survey-table-wrap">
+              <div class="tab-pane fade show active" id="folder1" role="tabpanel">
+                <div class="table-responsive">
+                  <table class="table survey-table" id="surveyQuestionsTable">
+                    <thead>
+                      <tr>
+                        <th style="width:40px">#</th>
+                        <th style="width:120px">Qutation...</th>
+                        <th>Question Text</th>
+                        <th style="width:110px">Answer Type</th>
+                        <th style="width:110px">Answer Value</th>
+                        <th style="width:70px">YES / NO</th>
+                        <th style="width:110px">Answer Score</th>
+                        <th style="width:120px">Remark</th>
+                      </tr>
+                    </thead>
+                    <tbody id="surveyTableBody">
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notes Row -->
+          <div class="row g-1 mt-3 align-items-center">
+            <div class="col-auto"><label class="survey-notes-label">Notes</label></div>
+            <div class="col"><input type="text" class="form-control survey-input w-100" id="notes"></div>
+          </div>
+
+          <!-- Button -->
+          <div class="mt-3">
+            <button type="button" class="btn survey-btn" id="surveySubmitBtn">Button6</button>
+          </div>
+
+        </div>
+      </div>
+      <!-- End Survey Form Card -->
 
     </main>
   </div>
@@ -143,6 +263,7 @@
 <a class="list-group-item list-group-item-action" href="app-calendar.html">Calendar</a>
 <a class="list-group-item list-group-item-action" href="app-tasks.html">Tasks</a>
 <a class="list-group-item list-group-item-action" href="app-invoice-list.html">Invoices</a>
+<a class="list-group-item list-group-item-action" href="survey.html">Survey</a>
 </div></div></div>
 
 <aside class="ab-customizer" aria-label="Theme customizer">
@@ -161,12 +282,33 @@
 </aside>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="../assets/js/utilities.js"></script>
 <script src="../assets/js/sidebar.js"></script>
 <script src="../assets/js/theme-customizer.js"></script>
-<script src="../assets/js/charts.js"></script>
-<script src="../assets/js/dashboard.js"></script>
 <script src="../assets/js/app.js"></script>
+<script>
+  // Add new row to survey table on last row Tab key
+  document.getElementById('surveyQuestionsTable').addEventListener('keydown', function(e) {
+    if (e.key === 'Tab') {
+      var rows = this.querySelectorAll('tbody tr');
+      var lastRow = rows[rows.length - 1];
+      var allInputs = lastRow.querySelectorAll('input');
+      if (e.target === allInputs[allInputs.length - 1] || e.target.closest('tr') === lastRow) {
+        var tbody = document.getElementById('surveyTableBody');
+        var newRow = document.createElement('tr');
+        newRow.innerHTML = '<td></td><td><input type="text" class="survey-input border-0 w-100" style="background:transparent"></td><td><input type="text" class="survey-input border-0 w-100" style="background:transparent"></td><td><input type="text" class="survey-input border-0 w-100" style="background:transparent"></td><td><input type="text" class="survey-input border-0 w-100" style="background:transparent"></td><td class="text-center"><input type="checkbox" class="form-check-input"></td><td><input type="text" class="survey-input border-0 w-100" style="background:transparent"></td><td><input type="text" class="survey-input border-0 w-100" style="background:transparent"></td>';
+        tbody.appendChild(newRow);
+      }
+    }
+  });
+
+  // Add row button via double-click on table body
+  document.getElementById('surveyTableBody').addEventListener('dblclick', function() {
+    var tbody = document.getElementById('surveyTableBody');
+    var rowNum = tbody.querySelectorAll('tr').length + 1;
+    var newRow = document.createElement('tr');
+    newRow.innerHTML = '<td>' + rowNum + '</td><td><input type="text" class="survey-input border-0 w-100" style="background:transparent"></td><td><input type="text" class="survey-input border-0 w-100" style="background:transparent"></td><td><input type="text" class="survey-input border-0 w-100" style="background:transparent"></td><td><input type="text" class="survey-input border-0 w-100" style="background:transparent"></td><td class="text-center"><input type="checkbox" class="form-check-input"></td><td><input type="text" class="survey-input border-0 w-100" style="background:transparent"></td><td><input type="text" class="survey-input border-0 w-100" style="background:transparent"></td>';
+    tbody.appendChild(newRow);
+  });
+</script>
 </body></html>
